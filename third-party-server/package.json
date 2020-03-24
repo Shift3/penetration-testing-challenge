@@ -16,7 +16,7 @@
         "dotenv": "^4.0.0",
         "express": "^4.16.2",
         "express-jwt": "^5.3.0",
-        "morgan": "^1.9.0",
+        "morgan": "^1.9.1",
         "pg-promise": "^7.3.3"
     }
 }
