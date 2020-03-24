@@ -32,8 +32,6 @@ This is description of the folders in this project. You are allowed to analyze t
   - Contains the Dockerfile and SQL scripts to initialize the Postgres container. This code is primarily in place to setup the project and should not be a main focus for vulnerabilities.
 - /third-party-server
   - This directory contains a server application which represents a third-party server on the Internet. You are not looking for vulnerabilities within this application, although it will be directly involved with vulnerabilities you find within the main blog application.
-- postman-config
-  - Contains an exported Postman configuration. Use the `Import` function in Postman to load this configuration.
 
 ## Getting Started
 
