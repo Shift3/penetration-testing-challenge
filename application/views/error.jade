@@ -1,0 +1,9 @@
+extends layout
+
+block append stylesheets
+  link(rel='stylesheet', href='/stylesheets/styleFooterBottomPage.css')
+
+block content
+  h1 An error occurred.
+  h4= error
+  a(href="/") Click here to return home

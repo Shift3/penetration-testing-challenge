@@ -1,0 +1,38 @@
+extends layout
+
+block append stylesheets
+  link(rel='stylesheet', href='/stylesheets/styleFooterBottomPage.css')
+
+block content
+  div(class='row justify-content-center align-items-center')
+    div(id='post-container' class='col-sm-8 border border-primary rounded py-3 bg-light')
+      form(id='post-form' action='/post/#{id}' method='post')
+        h1 #{mode}
+        div(class='form-group')
+          label(for='inputTitle' class='col-form-label') Title
+          input(type='hidden' class='form-control' id='id' name='id' value='#{id}')
+          input(type='hidden' class='form-control' id='_csrf' name='_csrf' value='#{csrfToken}')
+          input(type='hidden' class='form-control' id='user_id' name='user_id' value='#{user_id}')
+          input(type='text' class='form-control' id='inputTitle' name='title' value='#{title}')
+        div(class='form-group')
+          label(for='inputPost' class='col-form-label') Post
+          textarea(class='form-control' rows='5' id='inputPost' name='post') #{post}
+        div(class='form-group')
+          div(class='row')
+            div(class='col-4 post-meta')
+              label Author:&nbsp;
+              span #{author}
+            div(id='created-at-container' class='col-4 post-meta hidden')
+              label Created:&nbsp;
+              span(id='created-at') #{created_at}
+            div(id='updated-at-container' class='col-4 post-meta hidden')
+              div(class='post-updated')
+                label Updated:&nbsp;
+                span(id='updated-at') #{updated_at}
+        input(type='submit' class='btn btn-primary' value='#{submitButton}')
+        a(id='delete-btn' class='btn btn-danger hidden' href='/post/delete/#{id}') Delete Post
+        a(class='btn btn-secondary' href='/') Cancel
+
+block append scripts
+  script(src='/javascripts/InsecureBlogApp.post.js')
+    

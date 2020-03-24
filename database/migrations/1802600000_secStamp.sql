@@ -1,0 +1,1 @@
+ALTER TABLE "blogapp"."users" ADD COLUMN "security_stamp" character(64) DEFAULT 'null';

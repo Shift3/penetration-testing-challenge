@@ -1,0 +1,9 @@
+extends layout
+
+block append stylesheets
+  link(rel='stylesheet', href='/stylesheets/styleFooterBottomPage.css')
+
+block content
+  h1= title
+  h4= message
+  a(href="/") Click here to return home
