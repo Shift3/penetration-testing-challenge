@@ -21,21 +21,6 @@ services:
     volumes:
       - ./database:/home/node/app
     entrypoint: "/home/node/app/migration-manager/scripts/entrypoint.sh"
-  third-party-server:
-    image: "node:13"
-    env_file: .env
-    working_dir: /home/node/server
-    depends_on: 
-      - postgres
-      - migrations
-    networks:
-      - dbnet
-      - appnet
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./third-party-server:/home/node/server
-    entrypoint: "/home/node/server/scripts/entrypoint.sh"
   application:
     image: "node:13"
     env_file: .env

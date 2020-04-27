@@ -15,8 +15,6 @@ class Post {
         obj && Object.assign( this, obj );
         let a = this.created_at;
         if ( a ) {
-            console.log( typeof a )
-            console.log( a )
             this.created_at =
                 `${a.getFullYear()}/${a.getMonth()<9?'0':''}${a.getMonth()+1}/${a.getDate()} ${a.getHours()}:${a.getMinutes()}`;
         }

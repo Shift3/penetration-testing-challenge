@@ -1,4 +1,4 @@
-# Shift3 Penetration Testing Challenge
+# Shift3 Penetration Testing Challenge Interview Edition
 
 This project is an intentionally vulnerable and exploitable blogging application to be used as a penetration testing security challenge. It also represents a solid list of things to NOT do as a web developer. Don't use this code in production; you'll have a bad time.
 
@@ -30,8 +30,6 @@ This is description of the folders in this project. You are allowed to analyze t
   - This is an [MVC-style](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) application using NodeJS, Express, and Jade templates.
 - /database
   - Contains the Dockerfile and SQL scripts to initialize the Postgres container. This code is primarily in place to setup the project and should not be a main focus for vulnerabilities.
-- /third-party-server
-  - This directory contains a server application which represents a third-party server on the Internet. You are not looking for vulnerabilities within this application, although it will be directly involved with vulnerabilities you find within the main blog application.
 
 ## Getting Started
 
@@ -50,9 +48,6 @@ This command can take at least five minutes when it is run for the first time. T
   - The database instance.
   - The database can be accessed by a database client via `localhost:5432`
   - See `.env` file for credentials
-- **penetration-testing-challenge_third-party-server**
-  - The third-party api server.
-  - The server can be accessed via `http://localhost:3000`
 - **penetration-testing-challenge_migrations**
   - This container sets up and seeds the database.
   - No external access.
